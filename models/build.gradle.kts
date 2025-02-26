@@ -1,11 +1,10 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.ksp)
 }
 
 android {
-    namespace = "com.deviltech.databasemanager"
+    namespace = "com.deviltech.models"
     compileSdk = 35
 
     defaultConfig {
@@ -31,14 +30,11 @@ android {
 }
 
 dependencies {
-    implementation(project(":models"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.room.runtime)
     implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    ksp(libs.androidx.room.compiler)
 }

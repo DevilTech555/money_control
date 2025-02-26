@@ -22,3 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "Money Control"
 include(":app")
 include(":dataBaseManager")
+include(":models")
